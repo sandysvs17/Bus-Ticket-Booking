@@ -21,6 +21,10 @@ public class BusSchedule {
 	@ManyToOne
 	private Bus bus;
 	
+	@ManyToOne
+	private BusOperator busOperator;
+	
+	
 	public int getId() {
 		return id;
 	}
@@ -69,10 +73,20 @@ public class BusSchedule {
 		this.bus = bus;
 	}
 
+	public BusOperator getBusOperator() {
+		return busOperator;
+	}
+
+	public void setBusOperator(BusOperator busOperator) {
+		this.busOperator = busOperator;
+	}
+
 	@Override
 	public String toString() {
 		return "BusSchedule [id=" + id + ", doj=" + doj + ", noOfHours=" + noOfHours + ", timeOfJourney="
-				+ timeOfJourney + ", fare=" + fare + ", bus=" + bus + "]";
+				+ timeOfJourney + ", fare=" + fare + ", bus=" + bus + ", busOperator=" + busOperator + "]";
 	}
+
+	
 
 }

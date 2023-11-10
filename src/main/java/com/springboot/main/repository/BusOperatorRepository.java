@@ -9,6 +9,5 @@ import com.springboot.main.model.BusOperator;
 public interface BusOperatorRepository extends JpaRepository<BusOperator, Integer>{
 	
 	List<BusOperator> findByExecutiveId(int eid);
-
-
+	
 }
